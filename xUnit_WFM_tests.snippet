@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>xUnit WFM tests</Title>
+			<Shortcut>xUnitWFM</Shortcut>
+			<Description>Code snippet for xUnit tests for WFM</Description>
+			<Author>Vlad Setchin</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>TestName</ID>
+                    <ToolTip>Replace with name of the Test</ToolTip>
+                    <Default>Test</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+                    [Fact]
+                    public void $TestName$WithQuoteInName()
+                    {
+                
+                    }
+
+                    [Fact]
+                    public void $TestName$WithNoName()
+                    {
+
+                    }
+
+                    [Fact]
+                    public void $TestName$WithNoDb()
+                    {
+	                    OpenWave.ST.Data.DataFactory fact = new DataFactory(Globals.User);
+                        fact.Database.Close();
+
+                    }
+                ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

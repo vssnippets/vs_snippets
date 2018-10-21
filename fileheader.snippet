@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>fileheader</Title>
+			<Shortcut>fhead</Shortcut>
+			<Description>Code snippet for file header comments</Description>
+			<Author>Vlad Setchin</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>filename</ID>
+					<ToolTip>File Name</ToolTip>
+					<Default>classname.cs</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+			<![CDATA[// **************************************************************
+			// <copyright file="$filename$" company="Open Wave">
+			// Copyright (c) Open Wave. All rights reserved.
+			// </copyright>
+			// <author>
+			// Vlad Setchin
+			// </author>
+			// **************************************************************]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
